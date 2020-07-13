@@ -10,10 +10,17 @@ export interface Todo {
     title: string;
     completed: boolean;
 }
-// interface that is meant to describe dispatch action 
+// interface that is meant to describe fetch action 
 export interface FetchToDosAction {
     type: ActionTypes.fetchToDos;
     payload: Todo[]
+
+}
+// interface that is meant to describe delete action 
+export interface DeleteToDoAction {
+    type: ActionTypes.deleteToDo;
+    // a number - ie the id of the todo we need to delete
+    payload: number;
 
 }
 
@@ -32,5 +39,12 @@ export const fetchTodos = () => {
             payload: response.data
         })
 
+    }
+}
+
+export const deleteToDo = (id: number): DeleteToDoAction => {
+    return {
+        type: ActionTypes.deleteToDo,
+        payload: id
     }
 }
