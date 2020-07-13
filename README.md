@@ -1,5 +1,4 @@
+## React Typescript Lesson
 
-
-## Main react App
-
-This is the main React App
+This is the react typescript lesson. The first Lesson.
+Each Branch is a lesson. The last branch is the main app. 
